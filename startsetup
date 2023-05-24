@@ -1,0 +1,54 @@
+#!/usr/bin/bash 
+clear 
+pkg install pv -y >/dev/null 2>&1
+echo -e "\033[36m\033[1m]────────────────────────────────────────────["
+echo -e "\n\033[32m\033[1m   Installing All Packages and Dependencies" | pv -qL 10
+sleep 2
+echo -e "\n\033[31m   [\033[37m+\033[31m] INSTALLING PYTHON" | pv -qL 15
+pkg install python -y >/dev/null 2>&1
+echo -e "\033[32m   [✓] Installed successfully" | pv -qL 15
+sleep 3
+echo -e "\n\033[31m   [\033[37m+\033[31m] INSTALLING FISH" | pv -qL 15
+pkg install unstable-repo -y >/dev/null 2>&1
+echo -e "\033[32m   [✓] Installed successfully" | pv -qL 15
+sleep 3
+
+echo -e "\n\033[31m   [\033[37m+\033[31m] INSTALLING LOLCAT" | pv -qL 15
+gem install lolcat -y >/dev/null 2>&1
+echo -e "\033[32m   [✓] Installed successfully" | pv -qL 15
+sleep 3
+
+echo -e "\n\033[31m   [\033[37m+\033[31m] INSTALLING PYTHON2" | pv -qL 15
+pkg install python2 -y >/dev/null 2>&1
+echo -e "\033[32m   [✓] Installed successfully" | pv -qL 15
+sleep 3
+
+echo -e "\n\033[31m   [\033[37m+\033[31m] INSTALLING PHP" | pv -qL 15
+pkg install php -y >/dev/null 2>&1
+echo -e "\033[32m   [✓] Installed successfully" | pv -qL 15
+sleep 3
+echo -e "\n\033[32m\033[1m   Installed All Packages and Dependencies " | pv -qL 12
+echo -e "\n\033[36m\033[1m]────────────────────────────────────────────["
+sleep 3
+echo
+echo
+echo -e "\033[36m\033[1mMake sure u have subscribed my youtube channel \033[32m\n                 bugflixer" | pv -qL 15
+sleep 2
+echo
+read -p $'           \033[1m\033[38;5;209m[Yes or No] : \033[36m' opt
+if [ $opt == 'Yes' ] || [ $opt == 'y' ] || [ $opt == 'yes' ] || [ $opt == 'Y' ];
+then
+clear 
+echo
+sleep 1
+echo -e "   [$] \033[31m\033[1mThanks for using this tool....! " | lolcat 
+sleep 2
+else
+echo 
+
+echo -e "      \033[31m\033[1m         Please Subscribe"
+sleep 3
+termux-open-url https://youtube.com/@bugflixer
+fi
+
+
