@@ -48,7 +48,7 @@ echo
 
 echo -e "      \033[31m\033[1m         Please Subscribe"
 sleep 3
-termux-open-url https://youtube.com/@bugflixer
+termux-open-url https://youtube.com/@bugflixerr
 fi
 
 
